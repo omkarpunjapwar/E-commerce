@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Flipkart.com</title>
+    <link rel="icon" href="img/flipkart-logo-39904.png">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-image: url(img/banners/trial\ bg\ new.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 100%;
+
+        }
+
+        .topbar {
+            background-color: #2874f0;
+
+            padding: 1.5vh;
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        ul li {
+
+            display: inline-block;
+        }
+
+        .topbar ul li a {
+
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            letter-spacing: .1px;
+            font-weight: 500px;
+            color: white;
+            padding: 0px 10px;
+        }
+
+        .flipkartlogo img {
+            /* inthe topbar */
+            /* position: absolute; */
+            width: 5em;
+            /* margin-right: 8em;
+    margin-bottom: 2em; */
+
+        }
+
+        .flipkartlogo {
+            position: absolute;
+            margin-right: 45em;
+            margin-bottom: 1.5em;
+            display: flex;
+            width: 7em;
+        }
+
+        .flipkartlogo :hover {
+            cursor: pointer;
+        }
+
+        .explor {
+            color: white;
+            position: absolute;
+            margin-top: 2.8em;
+            margin-left: -7.2em;
+            font-size: .7em;
+            font-style: italic;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .explor:hover {
+            border-bottom: .1em solid #ffe500;
+        }
+
+        #plus {
+            color: #ffe500;
+        }
+
+        .explor img {
+            width: 1em;
+            margin-left: .2em;
+        }
+
+        .topbar ul li a:hover {
+            color: wheat;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -5em;
+
+        }
+
+        .search input {
+            border: .2em solid white;
+            border-radius: .3em;
+            width: 20em;
+            padding: .6em .8em;
+            padding-right: 0.8em;
+            outline: 0;
+            font-family: 'Nunito', sans-serif;
+            padding-right: 7.5em;
+        }
+
+        button img {
+            width: 1.8em;
+        }
+
+        button {
+            background: none;
+            border: none;
+            position: absolute;
+            margin-left: 10em;
+        }
+
+        button:hover {
+            cursor: pointer;
+            filter: drop-shadow(1px 1px .3px rgba(0, 0, 0, 0.397));
+            transition: ease-in-out;
+        }
+
+        .login {
+            font-family: 'Nunito', sans-serif;
+            background: white;
+            color: #8a2be2;
+            margin-left: 51em;
+            padding: .4em 3em;
+            border-radius: .1em;
+            position: absolute;
+            text-decoration: none;
+        }
+
+        .login:hover {
+            cursor: pointer;
+            background-color: whitesmoke;
+        }
+
+        main {
+            height: auto;
+        }
+
+        .cart {
+            margin-left: 3em;
+            margin-right: 0.2em;
+            padding-top: .2em;
+            width: 1.2em
+        }
+
+        #cartt {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        #cartt:hover {
+            cursor: pointer;
+        }
+
+        .cartorg {
+            display: flex;
+            align-items: center;
+            margin-left: -1em;
+        }
+
+        #arrow {
+            margin-left: 4px;
+            margin-top: .2em;
+            width: 10px;
+            transition: .1s ease-in-out;
+        }
+
+
+        .aligntop {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #menu {
+            color: #ffffff;
+            margin-left: 40px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            letter-spacing: .1px;
+            font-weight: 500px;
+        }
+
+        #menutab {
+            background: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px 0px rgb(138, 43, 226);
+            margin-left: 45em;
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .tt3 {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menuicon {
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        .listmenu {
+            padding: 10px;
+        }
+
+        .listmenu:hover {
+            background-color: rgba(0, 255, 255, 0.226);
+            cursor: pointer;
+        }
+
+        #menu:hover {
+            cursor: pointer;
+            color: wheat;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .rotates {
+            rotate: -180deg;
+        }
+
+        #menudiv {
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* this is real login window down */
+
+
+        .formlogin {
+            height: 30em;
+            width: 45em;
+            margin: auto;
+            background: white;
+            border-radius: .5em;
+            margin-top: 3em;
+            box-shadow:
+                0px 1.4px 1.7px rgba(0, 0, 0, 0.02),
+                0px 3.4px 4.2px rgba(0, 0, 0, 0.028),
+                0px 6.4px 7.9px rgba(0, 0, 0, 0.035),
+                0px 11.4px 14.1px rgba(0, 0, 0, 0.042),
+                0px 21.3px 26.3px rgba(0, 0, 0, 0.05),
+                0px 51px 63px rgba(0, 0, 0, 0.07);
+        }
+
+        .blueside {
+            height: 30em;
+            width: 15em;
+            background: #2874f0;
+            border-radius: .5em 0em 0em .5em;
+        }
+
+        .userinputwindow {
+            width: 30em;
+            height: 30em;
+            background: red;
+            position: absolute;
+        }
+
+        #useremail {
+            border: none;
+            outline: 0cm;
+            position: absolute;
+            margin-left: 18em;
+            margin-top: 5em;
+            padding: 0em 1em;
+            font-size: medium;
+            width: 21.5em;
+            height: 2em;
+            border-bottom: 1.5px solid #e0e0e0;
+        }
+
+        #useremail:hover {
+            border-bottom: 1.5px solid #2874f0;
+
+        }
+
+        #password {
+            border: none;
+            outline: 0cm;
+            position: absolute;
+            margin-left: 18em;
+            margin-top: 9em;
+            padding: 0em 1em;
+            font-size: medium;
+            width: 21.5em;
+            height: 2em;
+            border-bottom: 1.5px solid #e0e0e0;
+        }
+
+        #password:hover {
+            border-bottom: 1.5px solid #2874f0;
+
+        }
+
+        .enteremail {
+            position: absolute;
+            margin-left: 22.5em;
+            margin-top: 5em;
+            font-family: 'Nunito', sans-serif;
+            font-size: .8em;
+            color: #878787;
+        }
+
+        .enterpass {
+            position: absolute;
+            margin-left: 22.5em;
+            margin-top: 10em;
+            font-family: 'Nunito', sans-serif;
+            font-size: .8em;
+            color: #878787;
+        }
+
+        .forgot {
+            text-decoration: none;
+            position: absolute;
+            margin-left: 38em;
+            margin-top: 9.5em;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            z-index: 1;
+            color: #2874f0;
+        }
+
+        .termslog {
+            color: #878787;
+            font-size: 12px;
+            font-weight: 400;
+            position: absolute;
+            font-family: 'Nunito', sans-serif;
+            margin-left: 24em;
+            margin-top: 18em;
+        }
+
+        .logpri {
+            text-decoration: none;
+            color: #2874f0;
+        }
+
+        .loginred {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fb641b;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+            border: none;
+            color: #fff;
+            width: 23.7em;
+            height: 3em;
+            font-size: 1em;
+            font-family: 'Nunito', sans-serif;
+            margin-left: 18em;
+            margin-top: 17em;
+            cursor: pointer;
+        }
+
+        .loginred:hover {
+            box-shadow:
+                0px 1.4px 1.7px rgba(0, 0, 0, 0.02),
+                0px 3.4px 4.2px rgba(0, 0, 0, 0.028),
+                0px 6.4px 7.9px rgba(0, 0, 0, 0.035),
+                0px 11.4px 14.1px rgba(0, 0, 0, 0.042),
+                0px 21.3px 26.3px rgba(0, 0, 0, 0.05),
+                0px 51px 63px rgba(0, 0, 0, 0.07);
+
+        }
+
+        .or {
+            position: absolute;
+            font-size: 1em;
+            font-family: 'Nunito', sans-serif;
+            margin-left: 28.8em;
+            margin-top: 20.5em;
+            color: #787777;
+        }
+
+        .otp {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+            border: none;
+            color: #2874f0;
+            width: 23.7em;
+            height: 3em;
+            font-size: 1em;
+            font-family: 'Nunito', sans-serif;
+            margin-left: 18em;
+            margin-top: 22em;
+            cursor: pointer;
+        }
+
+        .otp:hover {
+            box-shadow:
+                0px 1.4px 1.7px rgba(0, 0, 0, 0.02),
+                0px 3.4px 4.2px rgba(0, 0, 0, 0.028),
+                0px 6.4px 7.9px rgba(0, 0, 0, 0.035),
+                0px 11.4px 14.1px rgba(0, 0, 0, 0.042),
+                0px 21.3px 26.3px rgba(0, 0, 0, 0.05),
+                0px 51px 63px rgba(0, 0, 0, 0.07);
+
+        }
+
+        .illus {
+            width: 17em;
+            margin-top: 2.5em;
+            margin-left: -1em;
+        }
+
+        .biglog {
+            color: white;
+            font-size: 1.8em;
+            font-family: 'Nunito', sans-serif;
+            padding-top: 2em;
+            padding-left: 1em;
+        }
+
+        .biglog2 {
+            color: #dbdbdb;
+            font-size: 1.2em;
+            font-family: 'Nunito', sans-serif;
+            padding-top: 2em;
+            padding-left: 1.2em;
+            line-height: 150%;
+        }
+
+        .newacc {
+            text-decoration: none;
+            position: absolute;
+            color: #2874f0;
+            font-size: .8em;
+            font-family: 'Nunito', sans-serif;
+            margin-top: 34em;
+            margin-left: 29em;
+        }
+
+        .newacc:hover {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="topbar">
+            <div class="aligntop">
+
+                <div class="flipkartlogo"><a href="index.html" class="logohrf"><img
+                            src="img/banners/flipkart-logo-textonly.png" alt="logo*"></a>
+
+                    <a href="plusflipa.html" class="plushrf"> <span class="explor"> Explore <span
+                                id="plus">Plus</span><img src="img/genral imges/plus logo.png" alt="logo*"></span></a>
+
+                </div>
+                <div class="search">
+                    <input type="text" name="search" placeholder="Search For Products,Brands & More">
+                    <button><img src="img/genral imges/icons8-search-200.png" alt="serchic*">
+                    </button>
+
+
+
+                    <div id="menudiv">
+                        <p id="menu">Menu</p>
+                        <img id="arrow" class="rotate" src="img/white down arrow.png">
+                    </div>
+
+
+
+                    <div class="cartorg"> <a href="yourcart.html"><img class="cart"
+                                src="img/icons8-shopping-cart-24.png" alt="*cart"></a>
+                        <span id="cartt">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="tt3">
+
+            <ul id="menutab" class="hide">
+                <li class="listmenu"><img class="menuicon" src="img/icons8-notification-100.png">
+                    Notification
+                    Preferance</li>
+                <li class="listmenu"><img class="menuicon" src="img/icons8-design-96.png">Services
+                </li>
+                <li class="listmenu"><img class="menuicon" src="img/icons8-technical-support-75.png">Coustmer Care</li>
+                <li class="listmenu"><img class="menuicon" src="img/icons8-settings-96.png">Settings
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- this is login window -->
+
+    <div class="formlogin">
+
+        <div class="form">
+            <div class="enteremail">Enter Email/mobile number</div>
+            <input id="useremail" type="text" name="email">
+            <div class="enterpass">Enter Password</div>
+            <a class="forgot" href="login2.html">Forgot?</a>
+            <input id="password" type="password" name="email">
+        </div>
+        <div class="termslog">
+            By continuing, you agree to Flipkart's <a class="logpri" href="tearm.html">Terms of
+                Use</a> and <a class="logpri" href="tearm.html">Privacy Policy.</a>
+        </div>
+        <div class="loginred">
+            Login
+        </div>
+        <div class="or">OR</div>
+        <div class="otp">
+            Request OTP
+        </div>
+        <a href="index.html" class="newacc">New to Flipkart? Create an account</a>
+
+        <div class="blueside">
+            <div class="biglog">Login</div>
+            <div class="biglog2">Get access to your Orders, Wishlist and Recommendations</div>
+            <img src="img/banners/flipkart illus.png" alt="*img" class="illus">
+        </div>
+    </div>
+
+    <script>
+        var menudiv = document.getElementById("menudiv");
+        var menu = document.getElementById("menu");
+        var arrow = document.getElementById("arrow");
+        var listmenu = document.getElementsByClassName("listmenu");
+
+        menu.onclick = function () {
+            menutab.classList.toggle("hide");
+            arrow.classList.toggle("rotates");
+        }
+        for (option of listmenu) {
+            option.onclick = function () {
+                menu.innerHTML = this.textContent;
+                menutab.classList.toggle("hide");
+                arrow.classList.toggle("rotates");
+            }
+        }
+
+        var menudiv = document.getElementById("menudiv");
+        var menu2 = document.getElementById("menu2");
+        var x = document.getElementById("x");
+        var listmenu = document.getElementsByClassName("listmenu");
+
+        menu2.onclick = function () {
+            menutab2.classList.toggle("hide");
+
+        }
+        x.onclick = function () {
+            menutab2.classList.toggle("hide");
+
+        }
+
+
+    </script>
+</body>
+
+</html>

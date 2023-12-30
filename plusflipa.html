@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Cart | Flipkart.com</title>
+    <link rel="icon" href="img/flipkart-logo-39904.png">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .mainbox {
+            height: 100%;
+            width: 60em;
+            background: white;
+            border-radius: .3em;
+            box-shadow:
+                0px 1.4px 1.7px rgba(0, 0, 0, 0.02),
+                0px 3.4px 4.2px rgba(0, 0, 0, 0.028),
+                0px 6.4px 7.9px rgba(0, 0, 0, 0.035),
+                0px 11.4px 14.1px rgba(0, 0, 0, 0.042),
+                0px 21.3px 26.3px rgba(0, 0, 0, 0.05),
+                0px 51px 63px rgba(0, 0, 0, 0.07);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mainbox img {
+            margin: auto;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            height: 4.85em;
+            margin-top: 1em;
+            border: 1px solid #cfd0d3;
+        }
+
+        .cc {
+            font-family: 'Nunito', sans-serif;
+            font-size: small;
+            margin-left: 4.5em;
+            color: #565656;
+        }
+
+
+        body {
+            background: #f1f3f6;
+
+        }
+
+
+        /* topbar down */
+
+
+        .topbar {
+            background-color: #8a2be2;
+            padding: 2vh;
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        ul li {
+
+            display: inline-block;
+        }
+
+        .topbar ul li a {
+
+            text-decoration: none;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            letter-spacing: .1px;
+            font-weight: 500px;
+            color: white;
+            padding: 0px 10px;
+        }
+
+        #logo {
+            width: 80px;
+            padding-right: 20px;
+        }
+
+        .topbar ul li a:hover {
+            color: wheat;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .search input {
+            border: 2px solid white;
+            border-radius: 4px;
+            width: 300px;
+            padding: 6px 10px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        button {
+            padding: 3px;
+            border: 2px solid #ffffff;
+            border-radius: 6px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            margin-left: 8px;
+        }
+
+        button:hover {
+            color: wheat;
+            cursor: pointer;
+        }
+
+        main {
+            height: auto;
+        }
+
+        .cart {
+            margin-left: 70px;
+            margin-right: 0px;
+            padding-top: 5px;
+            width: 20px;
+        }
+
+        #arrow {
+            margin-left: 4px;
+            margin-top: .2em;
+            width: 10px;
+            transition: .2s ease-in-out;
+        }
+
+
+        .aligntop {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #menu {
+            color: #ffffff;
+            margin-left: 40px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            letter-spacing: .1px;
+            font-weight: 500px;
+        }
+
+        #menutab {
+            background: white;
+            display: flex;
+            flex-direction: column;
+            border-radius: 6px;
+            box-shadow: 0px 0px 10px 0px rgb(138, 43, 226);
+            margin-left: 840px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tt3 {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menuicon {
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        .listmenu {
+            padding: 10px;
+        }
+
+        .listmenu:hover {
+            background-color: wheat;
+            cursor: pointer;
+        }
+
+        #menu:hover {
+            cursor: pointer;
+            color: wheat;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .rotates {
+            rotate: -180deg;
+        }
+
+        #menudiv {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <ul class="aligntop">
+            <li><a href="index.html"><img id="logo" src="img/flipkart-logo-39917.png" alt="logo"></a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">contact us</a></li>
+            <li><a href="index.html">about us</a></li>
+            <li><a href="index.html">help</a> </li>
+
+            <li>
+                <div class="search">
+                    <input type="text" name="search" placeholder="Search For Products,Brands & More">
+                    <button>search
+                    </button>
+                    <div id="menudiv">
+                        <p id="menu">Menu</p>
+                        <img id="arrow" class="rotate" src="img/white down arrow.png">
+                    </div>
+                    <a href="yourcart.html"><img class="cart" src="img/icons8-shopping-cart-24.png" alt="*cart"></a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tt3">
+
+        <ul id="menutab" class="hide">
+            <li class="listmenu"><img class="menuicon" src="img/icons8-notification-100.png">
+                Notification
+                Preferance</li>
+            <li class="listmenu"><img class="menuicon" src="img/icons8-design-96.png">Services
+            </li>
+            <li class="listmenu"><img class="menuicon" src="img/icons8-technical-support-75.png">Coustmer Care</li>
+            <li class="listmenu"><img class="menuicon" src="img/icons8-settings-96.png">Settings
+            </li>
+        </ul>
+    </div>
+    <div class="mainbox">
+        <img src="img/banners/plus 1.jpg" alt="baner*">
+        <img src="img/banners/plus 2.jpg" alt="baner*">
+    </div>
+    <div class="footer">
+        <div class="textbt"> Policies : Returns | Policy | Terms of use |Security |Privacy |Infringement </div>
+        <div class="cc">© 2007-2022
+            Flipkart.com</div>
+
+        <div class="need">Need help? Visit the <a href="index.html">Help Center</a> or <a href="index.html">Contact
+                Us</a></div>
+    </div>
+    <script>
+        var menudiv = document.getElementById("menudiv");
+        var menu = document.getElementById("menu");
+        var arrow = document.getElementById("arrow");
+        var listmenu = document.getElementsByClassName("listmenu");
+
+        menu.onclick = function () {
+            menutab.classList.toggle("hide");
+            arrow.classList.toggle("rotates");
+        }
+
+        option.onclick = function () {
+            menutab.classList.toggle("hide");
+            arrow.classList.toggle("rotates");
+        }
+
+    </script>
+</body>
+
+</html>

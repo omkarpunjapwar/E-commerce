@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Shantell+Sans:wght@300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bamum&display=swap');
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+    
+            background: #000;
+        }
+        .BGimage{
+            /* container for bgImage */
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            overflow: hidden;
+        }
+        
+        .bgImage{
+            position: absolute;
+            width: 50vw;
+            
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+
+            margin: auto;
+            /* margin-top: 3em; */
+            display: flex;
+            justify-content: center;
+
+            z-index: 1;
+            position: absolute;
+            /* background: #0423266f;
+            backdrop-filter: blur(30px); */
+        }
+
+        .minicard {
+            width: 55em;
+            height: 30em;
+            margin: auto;
+            background: aliceblue;
+            border-radius: 20px;
+            /* border-top-right-radius: 25%;
+            border-bottom-left-radius: 25%; */
+            z-index: 3;
+            display: flex;
+            justify-content: initial;
+            background: #23232425;
+            backdrop-filter: blur(20px);
+            box-shadow:
+                0px 2px 4.6px -7px rgba(0, 0, 0, 0.048),
+                0px 4.5px 10.6px -7px rgba(0, 0, 0, 0.07),
+                0px 7.9px 18.4px -7px rgba(0, 0, 0, 0.086),
+                0px 12.5px 29.2px -7px rgba(0, 0, 0, 0.1),
+                0px 19.3px 45px -7px rgba(0, 0, 0, 0.114),
+                0px 30.1px 70.2px -7px rgba(0, 0, 0, 0.13),
+                0px 50px 116.6px -7px rgba(0, 0, 0, 0.152),
+                0px 100px 233px -7px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .circle {
+            background: blueviolet;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+
+            display: inline-block;
+            margin-top: 7em;
+            margin-left: 3em;
+            /* border: 5px solid #3071f23f; */
+            box-shadow:
+                0px 2px 4.6px rgba(0, 0, 0, 0.048),
+                0px 4.5px 10.6px rgba(0, 0, 0, 0.07),
+                0px 7.9px 18.4px rgba(0, 0, 0, 0.086),
+                0px 12.5px 29.2px rgba(0, 0, 0, 0.1),
+                0px 19.3px 45px rgba(0, 0, 0, 0.114),
+                0px 30.1px 70.2px rgba(0, 0, 0, 0.13),
+                0px 50px 116.6px rgba(0, 0, 0, 0.152),
+                0px 100px 233px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            background: #0423266f;
+            backdrop-filter: blur(30px);
+        }
+
+        .circle img {
+            /* position: absolute; */
+            width: 250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+      
+
+        .textblock {
+            margin-left: 7em;
+            margin-top: -1em;
+        }
+
+        .name {
+            color: white;
+            margin-top: 8em;
+            margin-left: 2em;
+            text-align: left;
+        }
+
+        .name h2 {
+            color: #05fb63;
+            font-weight: bolder;
+            font-family: 'Noto Sans Bamum', sans-serif;
+            margin: .2em 0em;
+            font-size: medium;
+        }
+
+        .name h1 {
+            font-family: 'Tilt Warp', cursive;
+        }
+
+       
+
+        .dis {
+            color: #ffffff;
+            margin-top: 1em;
+            margin-left: 2em;
+            margin-right: 12em;
+            position: absolute;
+            opacity: 40%;
+
+        }
+
+        .navbar {
+            position: absolute;
+            display: flex;
+            color: #ffffff;
+            list-style-type: none;
+            margin-left: 35em;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 10px 30px;
+
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Noto Sans Bamum', sans-serif;
+            font-size: small;
+        }
+        .pr{
+            margin-left: -42em;
+            margin-right: 21em;
+            font-family: 'Noto Sans Bamum', sans-serif;
+            font-size: small;
+            visibility: hidden;
+        }
+
+        .navbar li a:hover {
+            color: #05fb63;
+        }
+
+        .social {
+            list-style-type: none;
+            margin-top: 10em;
+            margin-left: -2em;
+            position: absolute;
+        }
+
+        .social li {
+            display: inline-block;
+            margin-left: 4.2em;
+        }
+
+        .social li a img {
+            width: 15px;
+            border: 1.5px solid white;
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        .social li a img:hover {
+            background: #000000;
+            box-shadow: 0 0 30px #05fb6367;;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="BGimage">
+        <img src="/img/animated_23WatterBuble.gif" alt="*bgImage" class="bgImage">
+    </div>
+ 
+    <div class="card">
+
+        <div class="minicard">
+
+            <ul class="navbar">
+                <li class="pr">portfolio.</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+            <div class="circle">
+                <img src="img/profile-pic.png" alt="*pic">
+            </div>
+            <div class="textblock">
+                <div class="name">
+                    <h2>Hi ! I am</h2>
+                    <h1>OMKAR PUNJAPWAR</h1>
+                    <h2>And i'm a programmer</h2>
+                </div>
+                <div class="dis">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, aspernatur dolorum? Magni minus
+                    aut
+                </div>
+                <ul class="social">
+                    <li><a href="#"><img src="img/facebook-logo-24.png" alt="*icon"></a></li>
+                    <li><a href="https://www.instagram.com/_thenameis_omkar/?igshid=YmMyMTA2M2Y%3D"><img
+                                src="img/instagram-alt-logo-24.png" alt="*icon"></a></li>
+                    <li><a href="#"><img src="img/linkedin-logo-24.png" alt="*icon"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
